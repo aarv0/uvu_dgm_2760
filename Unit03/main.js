@@ -14,7 +14,7 @@ correctNumber += 1
 
 function evalGuess() {
     totalGuesses += 1 // totalGuesses = totalGuesses +1
-    gamerGuess = document.querySelector('#guess').value
+    gamerGuess = document.querySelector('#guess').nodeValue
     console.log(totalGuesses, gamerGuess)
     const feedback = document.querySelector('#feedback')
 
@@ -22,9 +22,9 @@ function evalGuess() {
         console.log(`gamerGuess is equal to correctNumber`)
         feedback.innerText = 'You win!'
         giveAward()
-    } else if (gamerGuess > correctNumber && gamerGuess < 16) {
+    } else if (gamerGuess > correctNumber) {
         feedback.innerText = 'too high, try again'
-    } else if (gamerGuess < correctNumber && gamerGuess > 0) {
+    } else if (gamerGuess < correctNumber) {
         feedback.innerText = 'too low, try again'
     } else {
         feedback.innerText = 'Please choose a number between 1 and 15 and try again'
@@ -36,7 +36,7 @@ function evalGuess() {
 function giveAward() {
 console.log('Congratualtions!')
 
-switch (totalGuesses) {
+switch(totalGuesses) {
     case 1: 
     case 2: 
     case 3: 
