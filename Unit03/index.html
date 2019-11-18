@@ -24,10 +24,31 @@
         <li>Create and append an image element</li>
     </ul>
     <h2>Instructions</h2>
-    <p id="myWindow">In this game you will try to pick a random number between 1 and 15 in as few guesses as possible. You will be awarded a ribbon for your skills. Good luck. If you would like tp play again, please refresh the page.</p>
+    <p>In this game you will try to pick a random number between 1 and 15 in as few guesses as possible. You will be awarded a ribbon for your skills. Good luck. If you would like tp play again, please refresh the page.</p>
 
-    <h2>Document Properties</h2>
-    <p id="myDocument"></p>
+
+    <article class="a1">
+    <h2>Play</h2>
+    <div input id="guess" type="number" placeholder="number">
+    <button onclick="evalGuess()">Guess</button>
+    </div>
+    </article>
+
+    <article class="a2">
+    <h2>Trys</h2>
+    <div id="attempts"></div>
+    </article>
+
+    <article class="a3">
+    <h2>Feedback</h2>
+    <div id="feedback"></div>
+    </article>
+
+     <article class="a4">
+     <h2>Award</h2>
+     <div id="ribbon"></div>
+     </article>
+   
 </main>
 
     <footer>
