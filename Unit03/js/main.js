@@ -48,6 +48,17 @@ function giveAward() {
             imagePath = 'images/ribbon.png' ///console.log('Case 4 just happened')
             break;
        // do the rest here
+       case 7:
+        case 8:
+        case 9:
+        case 10:
+        case 11:
+        case 12:
+        case 13:
+        case 14:
+        case 15:
+        imagePath = 'images/yellowribbon.png' ///console.log('Case 4 just happened')
+            break;
      }
     
     const awardImage = document.createElement('img') //Creates an <img> element
