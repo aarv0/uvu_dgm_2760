@@ -40,12 +40,12 @@ function giveAward() {
         case 1: 
         case 2: 
         case 3: 
-            imagePath = 'images/blue.png' //console.log('Blue ribbon for you!')//
+            imagePath = 'images/blueribbon.png' //console.log('Blue ribbon for you!')//
             break;
         case 4:
         case 5:
         case 6:
-            imagePath = 'images/red.png' ///console.log('Case 4 just happened')
+            imagePath = 'images/ribbon.png' ///console.log('Case 4 just happened')
             break;
        // do the rest here
      }
