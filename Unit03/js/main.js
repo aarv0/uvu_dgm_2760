@@ -1,3 +1,8 @@
+document.querySelector('#company').innerText = "Guessing Game"
+document.querySelector('header > h2').innerText = "Loops"
+
+
+
 // pick a random number between 0 and 16
 
 console.log(Math.PI)
