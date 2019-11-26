@@ -76,11 +76,6 @@ footer {
     background-color: rgb(231, 231, 231);
     clear: both;
 }
-#error {
-    font-size: 1.2rem;
-    background-color: yellow;
-    padding: 1rem;
-}
 footer p {
     text-align: center;
     color: #380f01;
