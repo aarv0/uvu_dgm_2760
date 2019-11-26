@@ -4,59 +4,52 @@
     <meta charset="UTF-8"/>
     <!----<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>02 Guessing Game</title>-->
+    <title>05 The Arborist</title>-->
     <link href="css/stylesheet.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <header>
-            <h1 id="company">
-                    Guessing Game
-                </h1>
-                <h2 id="slogan">
-                    Loops
-                </h2>
-        
-        
+            <h1>The Arborist</h1>
+            <h2>Events and Arrays</h2>
     </header>
 <main>
-    <h1>Hi/Lo Guessing Game</h1>
+    <h1>The Arborist</h1>
     <h2>What I learned</h2>
     <ul class="objectives">
-        <li>Implement functions</li>
-        <li>Implement a multi level if-then-else</li>
-        <li>Use innerText to provide user feedback</li>
-        <li>Implement a switch statement</li>
-        <li>Dynamically load a graphic</li>
-        <li>Create and append an image element</li>
+        <li>Implement error checking on incoming values</li>
+        <li>Create and manipulate values in an array</li>
+        <li>Implement Event Handlers</li>
+        <li>Implement Event Listeners</li>
+       
     </ul>
-    <h2>Instructions</h2>
-    <p>In this game you will try to pick a random number between 1 and 15 in as few guesses as possible. You will be awarded a ribbon for your skills. Good luck. If you would like to play again, please refresh the page.</p>
+    <h2>Adding Tree Practice</h2>
+   <button id="add_redwood">Add a Redwood Tree to the End</button>
+   <button id="add_pear">Add a pear to the Start</button>
+
+   <h2>Removing Tree Practice</h2>
+   <button id="remove_tree1">Remove the first tree</button>
+   <button id="remove_tree2">Remove the second tree</button>
+   <button id="remove_treeLast">Remove the last tree</button>
+ 
+
+   <h2>Manipulating the tree list</h2>
+   <button id="sortTrees">Sort the trees A>Z</button>
+   <button id="lowerCase">Make all trees lower case</button>
+
+   <h2>Getting any tree from the list</h2>
+   <button id="showName3">What is the name of tree number three</button>
+   <button id="showName4">What is the name of tree number four</button>
+
+   <aside>
+       <h2>The Tree List</h2>
+       <div id="displayResults"></div>
+       <h2>Error Message</h2>
+       <div id="error"></div>
+   </aside>
+
+   </main>
 
 
-    <article class="a1">
-    <h2>Play</h2>
-    <div>
-    <input id="guess" type="number" placeholder="number"/>
-    <button onclick="evalGuess()">Guess</button>
-    </div>
-    </article>
-
-    <article class="a2">
-    <h2>Trys</h2>
-    <div id="attempts"></div>
-    </article>
-
-    <article class="a3">
-    <h2>Feedback</h2>
-    <div id="feedback"></div>
-    </article>
-
-     <article class="a4">
-     <h2>Award</h2>
-     <div id="ribbon"></div>
-     </article>
-   
-</main>
 
     <footer>
         <p>Assignment for DGM 2760 by Ali Arvizu</p>

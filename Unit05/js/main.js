@@ -1,49 +1,124 @@
-function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min; // maximum is inclusive and the minimum is inclusive
+// Array of 4 trees
+const trees = ['Oak', 'Pine', 'aspen', 'Bald Cypress']
+const errorElement = document.querySelector('#error')
+const displayResults = document.querySelector('#displayResults')
+
+
+// Display tree list in displayResults
+const listTrees = () => {
+    let treeList = ''
+    trees.forEach(tree => {
+        treeList += `${tree} <br>`
+    })
+    displayResults.innerHTML = `${treeList} <span>${trees.length} elments long</span>`
 }
 
-let month = getRandomIntInclusive(1, 12)
-let fate = getRandomIntInclusive(1, 5)
-let day = getRandomIntInclusive(1, 30)
 
-function getMonthName(month) {
- let name
- switch (month) {
-    case 1:
-     name = "January"
-     break
-    case 2:
-     name = "February"
-     break
-    default:
-     name = "Not a month"
-     break
-  }
- return name
-}
+listTrees()
 
-function getFortune(fate) {
-    let message
-    switch (fate) {
-        case 1: 
-          message: 'be featured as the strongest superhero in the next Marvel movie!'
-          break
-         case 2:
-           message: 'win millions of dollars from a long lost uncle in Nigeria'
-           break
-        default:
-           message: 'Some sort of error occured'
-           break
+const lowerTrees = trees.map(function(tree) {
+    return tree.toLowerCase()
+})
+
+//Make lowercase
+document.querySelector('#lowerCase').onclick = () => {
+    
+    const newListTrees = () => {
+        let newTreeList = ''
+        lowerTrees.forEach(tree => {
+            newTreeList += `${tree} <br>`
+        })
+        displayResults.innerHTML = `${newTreeList} <span>${trees.length} elments long</span>`
     }
+    
+    newListTrees()
+
+    //Sort array a to z
+document.querySelector('#sortTrees').onclick = () => {
+    lowerTrees.sort()
+    newListTrees()
+}
 }
 
-let fate = getRandomIntInclusive(1, 5)
-let day = getRandomIntInclusive(1, 30)
-let month = getRandomIntInclusive(1, 12)
-const monthName = getMonthName(month)
+//Sort array a to z
+document.querySelector('#sortTrees').onclick = () => {
+    trees.sort()
+    listTrees()
+}
 
-const fortuneRevealed = `On ${monthName} ${day}, you will  ${fate}` //template literal
 
-document.querySelector('#fortune').innerText = fortuneRevealed
+
+
+//Add Redwood to end of list
+document.querySelector('#add_redwood').onclick = () => {
+    trees.push('Redwood')
+    listTrees()
+}
+
+//Add pear to start of list
+document.querySelector('#add_pear').onclick = () => {
+    trees.unshift('pear')
+    listTrees()
+}
+
+//Remove from the first tree
+document.querySelector('#remove_tree1').onclick = () => {
+    if (trees.length > 0) {
+        trees.shift()
+        listTrees()
+    }
+    else (
+        errorElement.textContent = 'No more trees to remove. Try adding one.'
+    )
+}
+
+
+//Remove 2nd tree
+document.querySelector('#remove_tree2').onclick = () => {
+    if (trees.length > 1) {
+        trees.splice(1, 1)
+        listTrees()
+    }
+    else (
+        errorElement.textContent = 'No second tree to remove.'
+    )
+}
+
+//Remove last tree in list
+document.querySelector('#remove_tree3').onclick = () => {
+    if (trees.length > 0) {
+        trees.pop()
+        listTrees()
+    }
+    else (
+        errorElement.textContent = 'No more trees to remove. Try adding one.'
+    )
+}
+
+
+
+
+//Display 3rd tree
+document.querySelector('#showName3').onclick = () => {
+    if (trees.length > 2) {
+        const treeThree = trees[2]
+        listTrees()
+        errorElement.textContent = `The third tree is ${treeThree}`
+    }
+    else (
+        errorElement.textContent = 'There is not a 3rd tree in the list. Try adding one.'
+    )
+}
+
+//Display 4th tree
+document.querySelector('#showName4').onclick = () => {
+    if (trees.length > 3) {
+        const treeFour = trees[3]
+        listTrees()
+        errorElement.textContent = `The fourth tree is ${treeFour}`
+    }
+    else (
+        errorElement.textContent = 'There is not a 4th tree in the list. Try adding one.'
+    )
+
+}
