@@ -58,7 +58,7 @@ document.querySelector('#remove_tree2').onclick = () => {
         listTrees()
     }
     else (
-        errorElement.textContent = 'No second tree to remove.'
+        errorElement.textContent = 'No more trees to remove. Try adding one.'
     )
 }
 
@@ -115,32 +115,44 @@ document.querySelector('#lowerTrees').onclick = () => {
     listTrees()
 }
 
-// Display third tree
-document.querySelector('#showName3').addEventListener('click', () => {
-    if(trees.length >= 3) {
-        thirdTree = trees[2];
-        errorElement.textContent = thirdTree;
+//Get the name of tree number 3
+document.querySelector('#showName3').onclick = () => {
+    if (trees.length > 2) {
+        let thirdTree = trees[2]
+        errorElement.textContent = thirdTree
+        listTrees()
     } else {
-        errorElement.textContent = "There isn't a third tree"
+        errorElement.innerHTML = "You need a third tree in the list to get the name. <br> Add some more trees!"
+    }
+   
+}
+
+// Get the name of tree number 4
+document.querySelector('#showName4').onclick = () => {
+    if (trees.length > 3) {
+        let fourthTree = trees[3]
+        errorElement.textContent = fourthTree
+        console.log(trees.length)
+        listTrees()
+    } else {
+        errorElement.innerHTML = 'You need a fourth tree in the list to get the name. <br> Add some more trees!';
     }
 
-})
-
-// Display fourth tree
-document.querySelector('#showName4').addEventListener('click', () => {
-    if(trees.length >= 4) {
-        fourthTree = trees[3];
-        errorElement.textContent = fourthTree;
-    } else {
-        errorElement.textContent = "There isn't a fourth tree"
-    }
-
-})
+}
 
 
 
 
-/* //Display 3rd tree
+
+
+
+
+
+
+}
+
+
+ /* //Display 3rd tree
 document.querySelector('#showName3').onclick = () => {
     if (trees.length > 2) {
         const treeThree = trees[2]
