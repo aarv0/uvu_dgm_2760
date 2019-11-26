@@ -12,15 +12,15 @@ document.querySelector('#slogan').innerText = "String Manipulation"
 
 // Fuction
 function tellStory(){
-    let nounString = document.querySelector('#nounTextArea').value
+    let nounString = document.querySelector('#nouns').value
     nounString.toLowerCase()
     nounArray = nounString.split(/\s+/)
     
-    let adjectiveString = document.querySelector('#adjectiveTextArea').value
+    let adjectiveString = document.querySelector('#adjs').value
     adjectiveString.toLowerCase()
     adjectiveArray = adjectiveString.split(/\s+/)
 
-    let verbString = document.querySelector('#verbTextArea').value
+    let verbString = document.querySelector('#verbs').value
     verbString.toLowerCase()
     verbArray = verbString.split(/\s+/)
  
