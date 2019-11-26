@@ -81,10 +81,6 @@ document.querySelector('#sortTrees').onclick = () => {
 
 
 
-
-
-
-
 //Make all trees lowercase
 document.querySelector('#lowerCase').onclick = () => {
     
@@ -111,10 +107,35 @@ document.querySelector('#add_redwood').onclick = () => {
     listTrees()
 }
 
-//Make all trees lower case
+// Make all the trees lower case
 document.querySelector('#lowerTrees').onclick = () => {
-    document.getElementById("displayResults").innerHTML = stringtree;
+    trees = trees.join(" <br>").toLowerCase()
+    trees = trees.split(" ,")
+    console.log(trees.length)
+    listTrees()
 }
+
+// Display third tree
+document.querySelector('#showName3').addEventListener('click', () => {
+    if(trees.length >= 3) {
+        thirdTree = trees[2];
+        errorElement.textContent = thirdTree;
+    } else {
+        errorElement.textContent = "There isn't a third tree"
+    }
+
+})
+
+// Display fourth tree
+document.querySelector('#showName4').addEventListener('click', () => {
+    if(trees.length >= 4) {
+        fourthTree = trees[3];
+        errorElement.textContent = fourthTree;
+    } else {
+        errorElement.textContent = "There isn't a fourth tree"
+    }
+
+})
 
 
 
@@ -147,7 +168,7 @@ document.querySelector('#showName4').onclick = () => {
 
 
 
-//Show Name 3 in List
+/* //Show Name 3 in List
 document.querySelector('#showName3').onclick = () => {
     if (trees.length > 2){
         var numberthree = trees.slice(2,3)
@@ -167,4 +188,4 @@ document.querySelector('#showName3').onclick = () => {
     } else {
         errorElement.textContent = 'There is not a 4th tree in you tree list'
     }
-    }
+    } */
