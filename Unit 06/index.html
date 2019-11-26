@@ -4,54 +4,56 @@
     <meta charset="UTF-8"/>
     <!----<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>05 The Arborist</title>-->
+    <title>06 Nonsense Story</title>-->
     <link href="css/stylesheet.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <header>
             <h1 id="company">
-                    The Arborist
+                    Nonsense Story
                 </h1>
                 <h2 id="slogan">
-                    Events and Arrays
+                    String Manipulation
                 </h2>
         
         
     </header>
 <main>
-    <h1>The Arborist</h1>
+    <h1>The Tale of Peter Rabbit</h1>
     <h2>What I learned</h2>
     <ul class="objectives">
-        <li>Implement error checking on incoming values</li>
-        <li>Create and manipulate values in an array</li>
-        <li>Implement Event Handlers</li>
-        <li>Implement Event Listeners</li>
+        <li>Extract text content from html elements</li>
+        <li>Convert a string into an array</li>
+        <li>Access elements of an array</li>
+        <li>Escape string characters</li>
+        <li>String Concatenation</li>
+        <li>Change a string to all lower case</li>
+        <li><a href="http://stackoverflow.com/questions/27983766/how-to-split-string-by-carria">Wild</a> Character substitution</li>
        
     </ul>
-    <h2>Adding Tree Practice</h2>
-   <button id="add_redwood">Add a Redwood Tree to the End</button>
-   <button id="add_pear">Add a pear to the Start</button>
-
-   <h2>Removing Tree Practice</h2>
-   <button id="remove_tree1">Remove the first tree</button>
-   <button id="remove_tree2">Remove the second tree</button>
-   <button id="remove_treeLast">Remove the last tree</button>
- 
-
-   <h2>Manipulating the tree list</h2>
-   <button id="sortTrees">Sort the trees A>Z</button>
-   <button id="lowerTrees">Make all trees lower case</button>
-
-   <h2>Getting any tree from the list</h2>
-   <button id="showName3">What is the name of tree number three</button>
-   <button id="showName4">What is the name of tree number four</button>
-
-   <aside>
-       <h2>The Tree List</h2>
-       <div id="displayResults"></div>
-       <h2>Error Message</h2>
-       <div id="error"></div>
-   </aside>
+    <article>
+        <h2 class="noun">Three NOUNS</h2>
+        <textarea id="nouns" rows="10" cols="50" class="textbox">House Tree Snow</textarea>
+        
+    </article>
+        
+        
+    <article>
+           <h2 class="adjective">Three Adjectives</h2>
+           <textarea id="adjs" rows="10" cols="50" class="textbox">Adorable Strong Sweet</textarea>
+           
+    </article>
+        
+    <article>
+              <h2 class="verb">Three VERBS</h2>
+              <textarea id="verbs" rows="10" cols="50" class="textbox">Run Jump Skip</textarea>
+              
+    </article>
+        
+          
+        <button onclick="tellStory()" class="storybutton">Tell the Story</button>      
+        <p id="story" class="thisisthestory"></p>
+         
 
    </main>
 

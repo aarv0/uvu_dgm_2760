@@ -1,141 +1,53 @@
-// Array with 4 trees listed
-const trees = ['Oak', 'Pine', 'aspen', 'Bald Cypress']
-const errorElement = document.querySelector('#error')
-const displayResults = document.querySelector('#displayResults')
+// function tellStory () {
+    //nounArray = querySelector('#noun') // lowercase String split ()
+    // repeat for adjectives and verbs
 
-
-// Display tree list inside displayResults div
-const listTrees = () => {
-    let treeList = ''
-    trees.forEach(tree => {
-        treeList += `${tree} <br>`
-    })
-    displayResults.innerHTML = `${treeList} <span>${trees.length} elments long</span>`
+    // const myStory = `Once upon a time there were four ${nounArray[0]}s named Flopsy, Mopsy... etc.`
 }
 
 
-listTrees()
+document.querySelector('company').innerText = "Nonsense Story"
 
-const lowerTrees = trees.map(function(tree) {
-    return tree.toLowerCase()
-})
-// Add a redwood to the end to old way
-/*var addTreeStart = function() {
-    trees.push("redwood");
-    listTrees();
+document.querySelector('#slogan').innerText = "String Manipulation"
 
-};
-var redwood = document.getElementById('add_redwood');
-redwood.onclick = addTreeStart; */
-
-// More concise verssion of add a redwood to the end
-
-document.querySelector('#add_redwood').onclick = () => {
-    trees.push('redwood')
-    listTrees()
-}
-
-
-
-//Make lowercase
-document.querySelector('#lowerCase').onclick = () => {
+// Fuction
+function tellStory(){
+    let nounString = document.querySelector('#nounTextArea').value
+    nounString.toLowerCase()
+    nounArray = nounString.split(/\s+/)
     
-    const newListTrees = () => {
-        let newTreeList = ''
-        lowerTrees.forEach(tree => {
-            newTreeList += `${tree} <br>`
-        })
-        displayResults.innerHTML = `${newTreeList} <span>${trees.length} elments long</span>`
-    }
+    let adjectiveString = document.querySelector('#adjectiveTextArea').value
+    adjectiveString.toLowerCase()
+    adjectiveArray = adjectiveString.split(/\s+/)
+
+    let verbString = document.querySelector('#verbTextArea').value
+    verbString.toLowerCase()
+    verbArray = verbString.split(/\s+/)
+ 
+    let storyArea = `Once upon a ${nouns[0]}, 
+    there were three little pigs. The first little pig was very 
+    ${adjectives[0]}, and he built a house out of
+     ${nouns[1]}s. The second little pig was ${adjectives[1]},
+      and he built his house out of ${nouns[2]}s. But the third 
+      little pig was very ${adjectives[2]}, and he built his house 
+      out of ${nouns[3]}s. One day all the pigs were ${verbs[0]}ing 
+      and ${verbs[1]}ing. All of the sudden a ${nouns[4]} came and
+       ${verbs[2]}ed on all of their houses.
     
-    newListTrees()
-
-    //Sort array a to z
-document.querySelector('#sortTrees').onclick = () => {
-    lowerTrees.sort()
-    newListTrees()
-}
+    
+    `
+    console.log(nouns, adjectives, verbs)
 }
 
-//Sort array a to z
-document.querySelector('#sortTrees').onclick = () => {
-    trees.sort()
-    listTrees()
-}
+document.querySelector('#tellStory').addEventListener('click', makeStory)
 
 
 
-
-//Add Redwood to end of list
-document.querySelector('#add_redwood').onclick = () => {
-    trees.push('Redwood')
-    listTrees()
-}
-
-//Add pear to start of list
-document.querySelector('#add_pear').onclick = () => {
-    trees.unshift('pear')
-    listTrees()
-}
-
-//Remove from the first tree
-document.querySelector('#remove_tree1').onclick = () => {
-    if (trees.length > 0) {
-        trees.shift()
-        listTrees()
-    }
-    else (
-        errorElement.textContent = 'No more trees to remove. Try adding one.'
-    )
-}
-
-
-//Remove 2nd tree
-document.querySelector('#remove_tree2').onclick = () => {
-    if (trees.length > 1) {
-        trees.splice(1, 1)
-        listTrees()
-    }
-    else (
-        errorElement.textContent = 'No second tree to remove.'
-    )
-}
-
-//Remove last tree in list
-document.querySelector('#remove_tree3').onclick = () => {
-    if (trees.length > 0) {
-        trees.pop()
-        listTrees()
-    }
-    else (
-        errorElement.textContent = 'No more trees to remove. Try adding one.'
-    )
-}
-
-
-
-
-//Display 3rd tree
-document.querySelector('#showName3').onclick = () => {
-    if (trees.length > 2) {
-        const treeThree = trees[2]
-        listTrees()
-        errorElement.textContent = `The third tree is ${treeThree}`
-    }
-    else (
-        errorElement.textContent = 'There is not a 3rd tree in the list. Try adding one.'
-    )
-}
-
-//Display 4th tree
-document.querySelector('#showName4').onclick = () => {
-    if (trees.length > 3) {
-        const treeFour = trees[3]
-        listTrees()
-        errorElement.textContent = `The fourth tree is ${treeFour}`
-    }
-    else (
-        errorElement.textContent = 'There is not a 4th tree in the list. Try adding one.'
-    )
+    
+    document.querySelector('#storyP').textContent = storyArea
 
 }
+
+document.querySelector('#storyButton').onclick = tellStory
+
+console.log()
