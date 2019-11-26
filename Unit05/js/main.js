@@ -1,3 +1,7 @@
+document.querySelector('#company').innerText = "The Arborist"
+document.querySelector('header > h2').innerText = "Events and Arrays"
+
+
 // Array with 4 trees listed
 const trees = ['Oak', 'Pine', 'Aspen', 'Bald Cypress']
 const errorElement = document.querySelector('#error')
