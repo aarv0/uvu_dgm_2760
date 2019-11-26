@@ -108,45 +108,43 @@ document.querySelector('#add_redwood').onclick = () => {
 }
 
 // Make all the trees lower case
-document.querySelector('#lowerTrees').onclick = () => {
-    trees = trees.join(" <br>").toLowerCase()
-    trees = trees.split(" ,")
-    console.log(trees.length)
-    listTrees()
-}
 
-//Get the name of tree number 3
-document.querySelector('#showName3').onclick = () => {
-    if (trees.length > 2) {
-        let thirdTree = trees[2]
-        errorElement.textContent = thirdTree
-        listTrees()
-    } else {
-        errorElement.innerHTML = "You need a third tree in the list to get the name. <br> Add some more trees!"
-    }
-   
-}
 
-// Get the name of tree number 4
-document.querySelector('#showName4').onclick = () => {
-    if (trees.length > 3) {
-        let fourthTree = trees[3]
-        errorElement.textContent = fourthTree
-        console.log(trees.length)
+
+
+
+
+
+// Tree Number Three
+
+document.querySelector('#show_Name3').onclick = () => {
+    if (trees.length > 2){
+        const three = trees[2]
+        console.log(three)
         listTrees()
+        displayResults3.textContent = three
     } else {
-        errorElement.innerHTML = 'You need a fourth tree in the list to get the name. <br> Add some more trees!';
+        errorElement.textContent = 'Dude, there are NO more than 3 TREES!'
+        
     }
 
+
 }
 
 
 
+// Tree Number Four
 
-
-
-
-
+document.querySelector('#show_Name4').onclick = () => {
+    if (trees.length > 3){
+        const four = trees[3]
+        displayResults3.textContent = four
+        console.log(four)
+        listTrees(four)
+    } else {
+        errorElement.textContent = 'Dude, there are NO more than 4 TREES!'
+        
+    }
 
 
 }
