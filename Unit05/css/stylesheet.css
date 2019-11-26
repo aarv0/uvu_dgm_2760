@@ -10,7 +10,7 @@ header, main, footer {
     margin: 0 auto;
 }
 header {
-    background-image: url("../images/arbor.jpg");
+    background-image: url("../images/tree.jpg");
     height: 200px;
 }
 header h1 {
