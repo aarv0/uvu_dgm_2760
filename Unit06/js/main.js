@@ -39,15 +39,15 @@ function tellStory(){
     console.log(nouns, adjectives, verbs)
 }
 
+
 document.querySelector('#tellStory').addEventListener('click', makeStory)
 
 
-
     
-    document.querySelector('#storyP').textContent = storyArea
+document.querySelector('#storyP').textContent = storyArea
 
 }
 
-document.querySelector('#storyButton').onclick = tellStory
+document.querySelector('#tellStory').onclick = tellStory
 
 console.log()

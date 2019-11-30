@@ -86,7 +86,7 @@ document.querySelector('#sortTrees').onclick = () => {
 
 
 //Make all trees lowercase
-document.querySelector('#lowerCase').onclick = () => {
+document.querySelector('#lowerTrees').onclick = () => {
     
     const newListTrees = () => {
         let newTreeList = ''
