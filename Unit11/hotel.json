@@ -1,0 +1,16 @@
+// JSON - Javascript Object Notation - a way to style objects - property keys must be double quoted
+
+{
+"hotels": [
+    {
+        "name": "Marriott",
+        "rooms": "50",
+        "gym": "Yes",
+        "roomTypes": ["King", "Queen", "Double"],
+        "address": "258 Broad Street",
+        "picture": "room1.jpeg"
+    },
+    {},
+    {}
+    ]
+}
