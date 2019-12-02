@@ -1,3 +1,8 @@
+document.querySelector('#company').innerText = "Hotel California"
+document.querySelector('header > h2').innerText = "You won't ever leave "
+
+
+
 async function getHotelData() {
     try {
         const response = await fetch('../hotel.json')
@@ -10,12 +15,15 @@ async function getHotelData() {
 let hotelData = {}
 getHotelData().then(data => hotelData = data)
 
+let anchorElements = document.querySelectorAll("a")
+
+
 
 // store in a variable document.querySelectorAll("a")
 // use that variable to loop
 document.querySelector('#marriott').addEventListener('click', hotelInfo)
-document.querySelector('#marriott').addEventListener('click', hotelInfo)
-document.querySelector('#marriott').addEventListener('click', hotelInfo)
+document.querySelector('#sheraton').addEventListener('click', hotelInfo)
+document.querySelector('#hilton').addEventListener('click', hotelInfo)
 
 //function hotelInfo(event) {
 //    console.log(event.target.id)

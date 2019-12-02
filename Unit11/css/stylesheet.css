@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/* CSS Document */
+body h1, h2, h3, h4, h5, h6, ul, li {margin:0;}
+body {
+    font-size: 16px;
+    font-family: Helvetica;
+}
+header, main, footer {
+    max-width: 960px;
+    margin: 0 auto;
+}
+header {
+    background-image: url("../images/hotelcali.jpg");
+    height: 200px;
+}
+header h1 {
+    color: #fff;
+    padding: 1rem 0 0 2%;
+    text-shadow: 2px 2px 5px #000;
+    font-size: 3rem;
+}
+header h2 {
+    color: #fff;
+    padding: .5rem 0 0 2%;
+    text-shadow: 2px 2px 5px #000;
+    font-size: 2rem;
+}
+h2 button id {
+    height: 10px
+}
+main h1 {
+    color: #0c2f85;
+    padding: 1rem 0 0 2%;
+}
+main h2 {
+    color: #206627;
+    padding: .6rem 0 0 2%;
+}
+
+main h3 {
+    padding: .6rem 0 0 2%;
+    color: #35923e;
+}
+main p {padding: .2rem 0 0 2%; line-height: 150%;}
+main p b {color: orange;}
+
+main ul {margin: 0;}
+main ul.objectives li {
+    list-style-image: url("../images/check.png");
+    margin-left: 3%;
+}
+
+main p {padding: .2rem 0 0 2%}
+
+.button {
+    height: 20px;
+    border-radius: 5px;
+    background-color: #0c2f85;
+    border: solid 1px #0c2f85;
+    width: auto;
+    display: inline-block;
+    text-align: left;
+    padding: 5px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+.button:hover{
+    cursor: pointer;
+    background-color: black;
+}
+main article {
+    float: left;
+    width: 60%;
+}
+main aside {
+    float: left;
+    width: 40%;
+}
+img{
+    width: 50%;
+}
+
+footer {
+    background-color: rgb(231, 231, 231);
+    clear: both;
+}
+footer p {
+    text-align: center;
+    color: #380f01;
+    padding: .5rem 0;
+}

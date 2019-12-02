@@ -8,9 +8,24 @@
         "gym": "Yes",
         "roomTypes": ["King", "Queen", "Double"],
         "address": "258 Broad Street",
-        "picture": "room1.jpeg"
+        "picture": "mariott.jpeg"
     },
-    {},
-    {}
+    {
+        "name": "Sheraton",
+        "rooms": "100",
+        "gym": "No",
+        "roomType": ["King", "Queen", "Twin"],
+        "address": "250 Sleepy Lane",
+        "picture": "sheraton.jpg"            
+    },
+    {
+        "name": "Hilton",
+        "rooms": "150",
+        "gym": "Yes",
+        "roomType": ["King", "Queen", "Double", "Twin"],
+        "address": "255 Walker Lane",
+        "picture": "hilton.jpg"
+    }
+
     ]
 }

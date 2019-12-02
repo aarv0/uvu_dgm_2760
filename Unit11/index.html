@@ -19,7 +19,8 @@
         
     </header>
 <main>
-    <h1>Hotel California</h1>
+    <h1 id="pageName">Hotel California</h1>
+
     <h2>What I learned</h2>
     <ul class="objectives">
         <li>Create an external JSON file</li>
@@ -32,12 +33,12 @@
     </ul>
     <h2>Select a Hotel</h2>
     <ul class="hotels">
-        <li><a href="#" id="marriott">Marriott Hotel Rooms</a></li>
-        <li><a href="#" id="sheraton">Sheraton Hotel Rooms</a></li>
-        <li><a href="#" id="hilton">Hilton Hotel Rooms</a></li>
+        <li class="button"><a href="#" id="marriott">Marriott Hotel Rooms</a></li>
+        <li class="button"><a href="#" id="sheraton">Sheraton Hotel Rooms</a></li>
+        <li class="button"><a href="#" id="hilton">Hilton Hotel Rooms</a></li>
     </ul>
     <h2 id="hotelName">Hotel</h2>
-    <h3>Address:</h3>
+    <h3>Address: </h3>
     <p>Number of Rooms: <span id="rooms"></span></p>
     <p>Gym Available: <span id="gym"></span></p>
     <p>Room Types: <span id="type"></span></p>
@@ -46,9 +47,9 @@
    </main>
 
 </body>
-    <!--<footer>
+    <footer>
         <p>Assignment for DGM 2760 by Ali Arvizu</p>
-    </footer>-->
+    </footer>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
