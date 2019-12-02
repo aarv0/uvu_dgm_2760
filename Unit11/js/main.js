@@ -33,7 +33,6 @@ function hotelInfo(event) {
         return event.target.id === hotel.name.toLowerCase()
     })
     console.log(hotelChoice)
-
     document.querySelector("#hotelName").textContent = `${hotelChoice.name} Hotel`
 
     document.querySelector("#address").textContent = `${hotelChoice.address}`
@@ -44,14 +43,11 @@ function hotelInfo(event) {
 
     document.querySelector("#type").textContent = `${hotelChoice.roomTypes}`
 
-    document.querySelector('#hotelImage').src = `./images/${hotelChoice.picture}`
-    console.log(hotelChoice.picture)
+    let imagePath = `${hotelChoice.picture}`
+
+    document.querySelector("#picture").setAttribute('src', imagePath)
 
 }
-
-anchorElements.forEach(element => {
-    addEventListener('click', hotelInfo)
-});
 
 
  //   let imagePath = `${hotelChoice.picture}`
