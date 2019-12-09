@@ -15,15 +15,15 @@ async function getHotelData() {
 let hotelData = {}
 getHotelData().then(data => hotelData = data)
 
-let anchorElements = document.querySelectorAll("a")
+
 
 
 
 // store in a variable document.querySelectorAll("a")
 // use that variable to loop
-document.querySelector('#marriott').addEventListener('click', hotelInfo)
-document.querySelector('#sheraton').addEventListener('click', hotelInfo)
-document.querySelector('#hilton').addEventListener('click', hotelInfo)
+document.querySelector("#marriott").addEventListener('click', hotelInfo)
+document.querySelector("#sheraton").addEventListener('click', hotelInfo)
+document.querySelector("#hilton").addEventListener('click', hotelInfo)
 
 //function hotelInfo(event) {
 //    console.log(event.target.id)
@@ -33,14 +33,15 @@ function hotelInfo(event) {
         return event.target.id === hotel.name.toLowerCase()
     })
     console.log(hotelChoice)
+    
     document.querySelector("#hotelName").textContent = `${hotelChoice.name} Hotel`
-
+    
     document.querySelector("#address").textContent = `${hotelChoice.address}`
-
+    
     document.querySelector("#rooms").textContent = `${hotelChoice.rooms}`
-
+    
     document.querySelector("#gym").textContent = `${hotelChoice.gym}`
-
+    
     document.querySelector("#type").textContent = `${hotelChoice.roomTypes}`
 
     let imagePath = `${hotelChoice.picture}`
