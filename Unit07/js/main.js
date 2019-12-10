@@ -7,7 +7,7 @@ let message
 const pizza = {
     crust: 'thin',
     size: 'small',
-    toppings: 'pepperoni', 
+    topping: 'pepperoni', 
     buildPizza: function () {
         console.log('buildPizza method has been called')
         message = `Baking a pizza on a ${pizza.crust} crust with a ${pizza.topping} and cheese just for you.`
@@ -16,7 +16,7 @@ const pizza = {
     shoppingList: () => {
         let flour = 1;
         let topping = 1;
-        if(pizza.crust === 'thick'){
+        if(pizza.crust === 'thick') {
             flour *= 2
         }
         if(pizza.size === "large") {
