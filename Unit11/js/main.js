@@ -7,7 +7,7 @@ document.querySelector('header > h2').innerText = "You won't ever leave "
 
 async function getHotelData() {
     try {
-        const response = await fetch('../hotel.json')
+        const response = await fetch('hotel.json')
         return await response.json() // Return the JSON object
     } catch (error) {
         console.error(error)
