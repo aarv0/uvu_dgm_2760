@@ -123,10 +123,13 @@ document.querySelector('#add_redwood').onclick = () => {
 
 document.querySelector('#showName3').onclick = () => {
     if (trees.length > 2){
-        const three = trees[2]
-        console.log(three)
+        var numberthree = trees.slice(2,3)
         listTrees()
-        displayResults3.textContent = three
+        document.getElementById("displayResults").innerHTML = numberthree;
+        //const three = trees[2]
+        //console.log(three)
+        //listTrees()
+        //displayResults3.textContent = three
     } else {
         errorElement.textContent = 'Hey, there are NO more than 3 TREES!'
         
@@ -141,10 +144,13 @@ document.querySelector('#showName3').onclick = () => {
 
 document.querySelector('#showName4').onclick = () => {
     if (trees.length > 3){
-        const four = trees[3]
-        displayResults3.textContent = four
-        console.log(four)
-        listTrees(four)
+        var numberfour = trees.slice(3,4)
+    listTrees()
+    document.getElementById("displayResults").innerHTML = numberfour;
+        //const four = trees[3]
+        //displayResults3.textContent = four
+        //console.log(four)
+        //listTrees(four)
     } else {
         errorElement.textContent = 'Hey, there are NO more than 4 TREES!'
         
