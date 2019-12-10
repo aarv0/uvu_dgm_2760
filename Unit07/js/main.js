@@ -1,5 +1,5 @@
 // Document SetUp DOM
-document.querySelector('#company').innerText = "Pizza Emporium"
+document.querySelector('#company').innerText = "Pizza Place"
 document.querySelector('header > h2').innerText = "Literal Objects"
 
 let message
