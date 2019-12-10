@@ -46,9 +46,13 @@ function hotelInfo(event) {
     
     document.querySelector("#type").textContent = `${hotelChoice.roomTypes}`
 
-    let imagePath = `${hotelChoice.picture}`
 
-    document.querySelector("#picture").setAttribute('src', imagePath)
+    document.querySelector("#picture").src = `${hotelChoice.picture}`
+  
+    console.log(photo)
+   // let imagePath = `${hotelChoice.picture}`
+
+    //document.querySelector("#picture").setAttribute('src', imagePath)
 
 }
 
