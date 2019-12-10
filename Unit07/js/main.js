@@ -10,7 +10,7 @@ const pizza = {
     toppings: 'pepperoni', 
     buildPizza: function () {
         console.log('buildPizza method has been called')
-        message = `Baking a pizza on a ${pizza.crust} crust with a ${pizza.toppings} and cheese just for you.`
+        message = `Baking a pizza on a ${pizza.crust} crust with a ${pizza.topping} and cheese just for you.`
         document.querySelector('#feedback').textContent = message
     },
     shoppingList: () => {
