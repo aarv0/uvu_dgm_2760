@@ -71,7 +71,7 @@ main div#displayResults {
     line-height: 150%;
 }
 main div#displayResults span { color: red;}
-main div#error { color: orange; margin-left: 2% background-color: yellow}
+main div#error { color: orange; margin-left: 2% background-color yellow}
 footer {
     background-color: rgb(231, 231, 231);
     clear: both;
