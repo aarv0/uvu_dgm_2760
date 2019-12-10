@@ -6,7 +6,7 @@ function tellStory() {
     
     console.log(noun)
 
-    var adjectiveArray = document.querySelector('#adjective').value.trim().split(/\s+/)
+    var adjectiveArray = document.querySelector('#adj').value.trim().split(/\s+/)
     
     console.log(adj)
 
@@ -33,7 +33,7 @@ function tellStory() {
 
     // get a reference to the querySelector('#story') = myStory
 
-    let storyContainer = document.querySelector('#storyP')
+    let storyContainer = document.querySelector('#story')
     storyContainer.textContent = myStory
 }
 
