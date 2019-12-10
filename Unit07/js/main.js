@@ -24,7 +24,7 @@ const pizza = {
             topping *= 2
         }
         // do the same for large property
-        message = `You will need to buy ${flour} cups of flour and 1 lb of ${pizza.toppings}.`
+        message = `You will need to buy ${flour} cups of flour and 1 lb of ${pizza.topping}.`
         document.querySelector('#feedback').textContent = message
     }
 }
