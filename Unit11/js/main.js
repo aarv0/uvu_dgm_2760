@@ -1,3 +1,5 @@
+// JSON - Javascript Object Notation - a way to style objects - property keys must be double quoted
+
 document.querySelector('#company').innerText = "Hotel California"
 document.querySelector('header > h2').innerText = "You won't ever leave "
 
